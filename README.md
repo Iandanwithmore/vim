@@ -1,5 +1,37 @@
 # PERSONAL
-# TMUX
+## INSTALL DOCKER 
+https://gitlab.com/bmcgonag/docker_installs
+version: "3.8"
+services:
+  db:
+    image: postgres:10.0
+    container_name: pg10
+    restart: always
+    ports:
+      - "5432:5432"
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: postgres
+      POSTGRES_DB: postgres
+    volumes:
+      - ./pg10_data:/var/lib/postgresql/data
+  pgadmin:
+    image: dpage/pgadmin4
+    container_name: pgadmin4
+    restart: always
+    ports:
+      - "5050:80"
+    environment:
+      PGADMIN_DEFAULT_EMAIL: pat@dev.corp
+      PGADMIN_DEFAULT_PASSWORD: postgres
+    volumes:
+      - ./pgadmin_data:/var/lib/pgadmin
+
+volumes:
+  pg10_data:
+  pgadmin_data:
+  
+## TMUX
 https://github.com/tmux-plugins/tpm
 ## bluetooh fail
 https://askubuntu.com/questions/1254404/ubuntu-20-04-lts-bluetooth-connection-failed
