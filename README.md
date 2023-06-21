@@ -30,9 +30,8 @@ services:
 volumes:
   pg10_data:
   pgadmin_data:
-  
-## TMUX
-https://github.com/tmux-plugins/tpm
+#ADD CERTIFICATE
+https://woshub.com/add-certificate-to-trusted-on-linux/
 ## bluetooh fail
 https://askubuntu.com/questions/1254404/ubuntu-20-04-lts-bluetooth-connection-failed
 ## vim base on 
